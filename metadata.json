@@ -1,0 +1,8 @@
+{
+  "name": "Portal de Apoio Clínico",
+  "description": "Guia de diluição, reconstituição, estabilidade e cálculo de medicamentos injetáveis hospitalares.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
