@@ -727,7 +727,7 @@ export default function App() {
 
             {/* SAFETY PREPARATION STEPS */}
             <div className="bg-blue-50/50 rounded-2xl border border-blue-100 p-4 sm:p-5 flex gap-3 text-xs leading-relaxed text-blue-900" id="sonda_intro_card">
-              <Info className="w-5 h-5 text-blue-750 shrink-0 mt-0.5" />
+              <Info className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
               <div>
                 <strong className="font-extrabold uppercase tracking-wider block mb-1 text-[#0c3366]">
                   Protocolo Geral de Preparo via Sonda (ISCAL)
@@ -818,7 +818,7 @@ export default function App() {
                               {med.forma}
                             </span>
                             <span className="text-slate-300">•</span>
-                            <span className="text-[11px] text-blue-750 font-bold bg-blue-50 px-2 py-0.5 rounded-md">
+                            <span className="text-[11px] text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded-md">
                               Ref: {med.comercial}
                             </span>
                           </div>
@@ -1050,7 +1050,7 @@ export default function App() {
                     {/* Observations warning alert box */}
                     {selectedMed.observacoes && (
                       <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-2xl flex gap-3 text-xs leading-relaxed text-yellow-900 mt-4">
-                        <Info className="w-5 h-5 text-yellow-750 flex-shrink-0 mt-0.5" />
+                        <Info className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                         <div>
                           <strong className="font-bold uppercase tracking-wider block mb-0.5 text-yellow-950">
                             Notas Clínicas e Contraindicações Importantes:
@@ -1254,10 +1254,10 @@ export default function App() {
                   
                   {/* Nome Comercial Box */}
                   <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
-                    <span className="text-[11px] font-bold text-blue-750 uppercase tracking-wider block mb-1">
+                    <span className="text-[11px] font-bold text-blue-600 uppercase tracking-wider block mb-1">
                       Nomes Comerciais de Referência
                     </span>
-                    <p className="text-slate-850 font-bold text-sm">{selectedSondaMed.comercial}</p>
+                    <p className="text-slate-800 font-bold text-sm">{selectedSondaMed.comercial}</p>
                   </div>
 
                   <div className="space-y-4">
@@ -1274,7 +1274,7 @@ export default function App() {
                           Restrito / Com restrições
                         </span>
                       ) : (
-                        <span className="text-xs font-black text-emerald-800 bg-emerald-50 border border-emerald-250 px-2.5 py-0.5 rounded-lg uppercase">
+                        <span className="text-xs font-black text-emerald-800 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-lg uppercase">
                           Compatível / Sem restrições
                         </span>
                       )}

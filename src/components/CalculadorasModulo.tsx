@@ -591,7 +591,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                           <p className="text-slate-700 leading-relaxed text-[11px]">
                             A coorte que embasa a aplicação do Padua mostrou que pacientes de <strong className="text-slate-900">Alto Risco (≥4)</strong> que não receberam profilaxia apresentaram uma taxa de <strong>11% de TEV em 90 dias</strong>, comparado a apenas <strong>2,2%</strong> nos que receberam (<span className="font-semibold text-[#0c3366]">HR 0,13; IC95% 0,04–0,40</span>).
                           </p>
-                          <p className="text-[10px] text-rose-900 font-bold bg-rose-100/50 p-2 rounded-xl border border-rose-250/20">
+                          <p className="text-[10px] text-rose-900 font-bold bg-rose-100/50 p-2 rounded-xl border border-rose-200/20">
                             Recomenda-se instituir profilaxia medicamentosa (parapirina, enoxaparina, etc.) caso não haja contraindicações clínicas ou risco ativo de sangramento.
                           </p>
                         </div>
@@ -601,10 +601,10 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                             <span className="text-emerald-600 text-base">✓</span>
                             <span>BAIXO RISCO DE TROMBOEMBOLISMO</span>
                           </p>
-                          <p className="text-slate-705 leading-relaxed text-[11px]">
+                          <p className="text-slate-600 leading-relaxed text-[11px]">
                             A taxa de eventos em pacientes de <strong className="text-slate-900">Baixo Risco (0–3)</strong> sem profilaxia medicamentosa é estatisticamente insignificante na coorte de derivação, não justificando o risco associado ao uso de anticoagulantes.
                           </p>
-                          <p className="text-[10px] text-emerald-900 font-bold bg-emerald-100/30 p-2 rounded-xl border border-emerald-250/10">
+                          <p className="text-[10px] text-emerald-900 font-bold bg-emerald-100/30 p-2 rounded-xl border border-emerald-200/10">
                             <strong>Conduta Recomendada:</strong> Profilaxia farmacológica geralmente não indicada. Priorize e incentive a mobilização precoce, hidratação adequada e acompanhamento rotineiro.
                           </p>
                         </div>
