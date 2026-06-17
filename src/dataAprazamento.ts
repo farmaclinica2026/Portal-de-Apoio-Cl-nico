@@ -32,7 +32,7 @@ export const ANTIMICROBIALS_DATA: Record<string, Antimicrobial> = {
   "LINEZOLIDA": { modes: [{ label: "Infusão 30 min", durationMin: 30 }, { label: "Infusão 2h", durationMin: 120 }] },
   "MEROPENEM": { modes: [{ label: "EV direto 5 min", durationMin: 5 }, { label: "SG 5% até 30 min", durationMin: 30 }, { label: "SF 0,9% 3h", durationMin: 180 }] },
   "METRONIDAZOL": { modes: [{ label: "Infusão 30 min", durationMin: 30 }, { label: "Infusão 60 min", durationMin: 60 }] },
-  "MOXIFLOXACINA": { modes: [{ label: "Bolus 3 min", durationMin: 3 }, { label: "Infusão 15 min", durationMin: 15 }] },
+  "MOXIFLOXACINA": { modes: [{ label: "Infusão 1h", durationMin: 60 }] },
   "OXACILINA": { modes: [{ label: "Direto 10 min", durationMin: 10 }, { label: "Infusão 1h", durationMin: 60 }] },
   "PIPERACILINA + TAZOBACTAM": { modes: [{ label: "Infusão rápida 30 min", durationMin: 30 }, { label: "Infusão lenta 3h", durationMin: 180 }, { label: "Infusão lenta 4h", durationMin: 240 }] },
   "POLIMIXINA B": { modes: [{ label: "Infusão 1h", durationMin: 60 }, { label: "Infusão 2h", durationMin: 120 }] },

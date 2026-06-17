@@ -331,7 +331,7 @@ export default function AprazamentoModulo({ onBackToHome, embedded = false }: Ap
           };
         });
         
-        const res = calculateSchedule(optimizedMeds, "08:00", gap, days, 'fixed', snap, tol, 'automatic');
+        const res = calculateSchedule(optimizedMeds, globalStartStr, gap, days, 'fixed', snap, tol, 'automatic');
         return {
           ...res,
           viabilityScore: 100,
@@ -1048,7 +1048,7 @@ export default function AprazamentoModulo({ onBackToHome, embedded = false }: Ap
                                             </span>
                                           );
                                           if (isConflict) return (
-                                            <span className={`${schedulingMode === 'automatic' ? 'bg-amber-50 border border-amber-200 text-amber-700' : 'bg-rose-50 border border-rose-200 text-rose-750'} text-[8.5px] font-bold uppercase px-2 py-0.5 rounded-md`}>
+                                            <span className={`${schedulingMode === 'automatic' ? 'bg-amber-50 border border-amber-200 text-amber-700' : 'bg-rose-50 border border-rose-200 text-rose-800'} text-[8.5px] font-bold uppercase px-2 py-0.5 rounded-md`}>
                                               {schedulingMode === 'automatic' ? 'Ajustado' : 'Conflito'}
                                             </span>
                                           );
@@ -1081,7 +1081,7 @@ export default function AprazamentoModulo({ onBackToHome, embedded = false }: Ap
                               const isInvalidRow = dosesAtTime.some(d => d.delayMin > tolerance);
 
                               return (
-                                <div key={idx} className={`p-3 space-y-2.5 ${isInvalidRow ? 'bg-rose-50/20' : isConflict ? 'bg-amber-55/20' : ''}`}>
+                                <div key={idx} className={`p-3 space-y-2.5 ${isInvalidRow ? 'bg-rose-50/20' : isConflict ? 'bg-amber-100/20' : ''}`}>
                                   <div className="flex items-center justify-between">
                                     <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-widest">
                                       Lote das {formatClock(time)}
@@ -1106,14 +1106,14 @@ export default function AprazamentoModulo({ onBackToHome, embedded = false }: Ap
                                       const isInvalid = dose.delayMin > tolerance;
                                       return (
                                         <div key={dose.medId} className={`flex items-start gap-2 p-3 rounded-xl border ${isInvalid ? 'bg-rose-50 border-rose-200' : 'bg-slate-50/50 border-slate-150'}`}>
-                                          <div className={`w-0.5 h-7 rounded-sm shrink-0 ${isInvalid ? 'bg-rose-600' : isConflict ? 'bg-amber-550' : 'bg-emerald-500'}`} />
+                                          <div className={`w-0.5 h-7 rounded-sm shrink-0 ${isInvalid ? 'bg-rose-600' : isConflict ? 'bg-amber-600' : 'bg-emerald-500'}`} />
                                           <div className="flex-1 min-w-0">
                                             <div className="flex justify-between items-start gap-2">
                                               <span className="font-bold text-xs text-slate-800 uppercase leading-none truncate block">
                                                 {med?.name}
                                               </span>
                                               {dose.delayMin > 0 && (
-                                                <span className="text-[8.5px] font-bold text-amber-700 bg-amber-55 px-1 py-0.5 rounded-sm shrink-0">
+                                                <span className="text-[8.5px] font-bold text-amber-700 bg-amber-100 px-1 py-0.5 rounded-sm shrink-0">
                                                   +{dose.delayMin}m
                                                 </span>
                                               )}
@@ -1139,7 +1139,7 @@ export default function AprazamentoModulo({ onBackToHome, embedded = false }: Ap
                 ))}
               </div>
             </div>
-          ) ) : (
+          )) : (
             <div className="bg-white rounded-3xl h-full shadow-xs border border-slate-200 p-8 flex flex-col items-center justify-center text-center relative overflow-hidden min-h-[300px]">
               <div className="absolute top-0 right-0 w-48 h-48 bg-blue-50 rounded-full blur-3xl -mr-24 -mt-24 pointer-events-none" />
               <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 border border-slate-150">

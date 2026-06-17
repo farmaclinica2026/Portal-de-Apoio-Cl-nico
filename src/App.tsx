@@ -90,7 +90,7 @@ import CalculadorasModulo from './components/CalculadorasModulo';
 
 const getViaDescription = (via: string) => {
   switch (via.toUpperCase()) {
-    case 'EV': return 'endovenoso';
+    case 'EV': return 'endovenosa';
     case 'IM': return 'intramuscular';
     case 'SC': return 'subcutâneo';
     case 'INAL': return 'inalatório';
@@ -356,7 +356,7 @@ export default function App() {
                 <FlaskConical className="w-6 h-6 animate-pulse" />
               </span>
               <div>
-                <h1 className="text-2xl sm:text-3.5xl font-extrabold tracking-tight" id="app_title">
+                <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight" id="app_title">
                   {currentView === 'home' 
                     ? 'Portal de Apoio Clínico' 
                     : currentView === 'sonda' 
@@ -403,7 +403,7 @@ export default function App() {
                 Módulos de Apoio Hospitalar
               </h3>
               
-              <div className="grid grid-cols-3 gap-2.5 sm:gap-4.5 max-w-xl sm:max-w-2xl mx-auto w-full" id="portal_modules">
+              <div className="grid grid-cols-3 gap-2.5 sm:gap-4 max-w-xl sm:max-w-2xl mx-auto w-full" id="portal_modules">
                 {[
                   {
                     id: 'manual',
@@ -620,7 +620,7 @@ export default function App() {
                         {med.customizado && (
                           <div className="absolute top-0 right-0 bg-blue-100 text-blue-800 text-[10px] font-extrabold px-3 py-1.5 rounded-bl-xl tracking-wider uppercase border-l border-b border-blue-200/50 flex items-center gap-1">
                             <Sparkles className="w-3 h-3 text-blue-600" />
-                            Institucional
+                            Personalizado
                           </div>
                         )}
 
@@ -847,7 +847,7 @@ export default function App() {
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-350 transition-all flex flex-col justify-between overflow-hidden relative animate-fade-in"
+                        className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-400 transition-all flex flex-col justify-between overflow-hidden relative animate-fade-in"
                         id={`card_sonda_${med.id}`}
                       >
                         <div className="p-5 flex-1 flex flex-col">
@@ -962,7 +962,7 @@ export default function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedMed(null)}
-              className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs cursor-pointer"
+              className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm cursor-pointer"
             />
 
             <div className="flex min-h-screen items-center justify-center p-4">
@@ -1200,7 +1200,7 @@ export default function App() {
                               {/* Row 2: Gotas */}
                               <div className="flex justify-between items-center bg-white/5 px-3 py-2 rounded-lg text-xs border border-white/5">
                                 <div>
-                                  <span className="block font-semibold text-sky-450">Equipo Macrogotas</span>
+                                  <span className="block font-semibold text-sky-500">Equipo Macrogotas</span>
                                   <span className="text-[10px] text-slate-400">Gravitacional (20 gts = 1mL)</span>
                                 </div>
                                 <div className="text-right font-mono">
@@ -1264,7 +1264,7 @@ export default function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedSondaMed(null)}
-              className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs cursor-pointer"
+              className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm cursor-pointer"
             />
 
             <div className="flex min-h-screen items-center justify-center p-4">
@@ -1419,7 +1419,7 @@ export default function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedUpcomingModule(null)}
-              className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs cursor-pointer"
+              className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm cursor-pointer"
             />
             <div className="flex min-h-screen items-center justify-center p-4">
               <motion.div
