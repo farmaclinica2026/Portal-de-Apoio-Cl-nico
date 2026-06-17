@@ -261,7 +261,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
                   <div>
                     <h2 className="text-lg font-bold text-slate-950 tracking-tight flex items-center gap-2">
-                      <Calculator className="w-5.5 h-5.5 text-blue-600" />
+                      <Calculator className="w-6 h-6 text-blue-600" />
                       <span>Escore de Pádua (Padua Prediction Score)</span>
                     </h2>
                     <p className="text-xs text-slate-500 font-medium">
@@ -425,7 +425,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                           <div className="text-xs">
                             <span className="font-bold text-slate-800 flex items-center gap-2">
                               <span>Trauma ou cirurgia recente (≤1 mês)</span>
-                              <span className="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.2 rounded-sm font-extrabold font-mono">2 pts</span>
+                              <span className="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded-sm font-extrabold font-mono">2 pts</span>
                             </span>
                           </div>
                         </label>
@@ -441,7 +441,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                           <div className="text-xs">
                             <span className="font-bold text-slate-800 flex items-center gap-2">
                               <span>Idade ≥70 anos</span>
-                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded-sm font-extrabold font-mono">1 pt</span>
+                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded-sm font-extrabold font-mono">1 pt</span>
                             </span>
                           </div>
                         </label>
@@ -457,7 +457,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                           <div className="text-xs">
                             <span className="font-bold text-slate-800 flex items-center gap-2">
                               <span>Insuficiência cardíaca ou respiratória</span>
-                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded-sm font-extrabold font-mono">1 pt</span>
+                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded-sm font-extrabold font-mono">1 pt</span>
                             </span>
                           </div>
                         </label>
@@ -473,7 +473,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                           <div className="text-xs">
                             <span className="font-bold text-slate-800 flex items-center gap-2">
                               <span>IAM agudo ou AVC isquêmico</span>
-                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded-sm font-extrabold font-mono">1 pt</span>
+                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded-sm font-extrabold font-mono">1 pt</span>
                             </span>
                           </div>
                         </label>
@@ -489,7 +489,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                           <div className="text-xs">
                             <span className="font-bold text-slate-800 flex items-center gap-2">
                               <span>Infecção aguda e/ou doença reumatológica</span>
-                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded-sm font-extrabold font-mono">1 pt</span>
+                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded-sm font-extrabold font-mono">1 pt</span>
                             </span>
                           </div>
                         </label>
@@ -505,7 +505,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                           <div className="text-xs">
                             <span className="font-bold text-slate-800 flex items-center gap-2">
                               <span>Obesidade (IMC ≥30 kg/m²)</span>
-                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded-sm font-extrabold font-mono">1 pt</span>
+                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded-sm font-extrabold font-mono">1 pt</span>
                             </span>
                           </div>
                         </label>
@@ -521,7 +521,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                           <div className="text-xs">
                             <span className="font-bold text-slate-800 flex items-center gap-2">
                               <span>Terapia hormonal em curso</span>
-                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded-sm font-extrabold font-mono">1 pt</span>
+                              <span className="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded-sm font-extrabold font-mono">1 pt</span>
                             </span>
                           </div>
                         </label>
