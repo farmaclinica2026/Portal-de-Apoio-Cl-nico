@@ -131,7 +131,15 @@ const findDisjointScheduleMeds = (
     return distA - distB;
   });
 
+  let steps = 0;
+  const MAX_STEPS = 1000;
+
   const backtrack = (index: number): boolean => {
+    steps++;
+    if (steps > MAX_STEPS) {
+      return false; // Safely abort to avoid freezing the browser on complex or unsolvable schedules
+    }
+
     if (index === sortedMeds.length) {
       return true;
     }
