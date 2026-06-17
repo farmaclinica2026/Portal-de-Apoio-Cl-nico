@@ -951,9 +951,8 @@ export default function AprazamentoModulo({ onBackToHome, embedded = false }: Ap
 
                     {expandedDays.includes(dayNum) && (
                       <div className="border-t border-slate-150 bg-white">
-                        
-                        {/* Desktop grid layout */}
-                        <div className="hidden sm:block overflow-x-auto">
+                        {/* Tabular timeline layout (Now same for both Mobile & Desktop via overflow scrolling) */}
+                        <div className="overflow-x-auto">
                           <table className="w-full border-collapse">
                             <thead>
                               <tr className="bg-slate-50/40">
@@ -975,7 +974,7 @@ export default function AprazamentoModulo({ onBackToHome, embedded = false }: Ap
                                   const hasCoinciding = dosesAtTime.some(d => d.isCoinciding);
                                   const hasSimultaneous = dosesAtTime.length > 1;
                                   const isConflict = hasCoinciding || hasSimultaneous;
-
+  
                                   return (
                                     <tr key={idx} className={`hover:bg-slate-50/30 transition-colors ${isConflict ? 'bg-amber-50/15' : ''}`}>
                                       {meds.map(m => {
@@ -1033,73 +1032,6 @@ export default function AprazamentoModulo({ onBackToHome, embedded = false }: Ap
                             </tbody>
                           </table>
                         </div>
-
-                        {/* Mobile block view layout */}
-                        <div className="sm:hidden divide-y divide-slate-150">
-                          {(() => {
-                            const dayDoses = result.doses.filter(d => d.day === dayNum);
-                            const uniqueTimes = Array.from(new Set(dayDoses.map(d => d.startMin))).sort((a: number, b: number) => a - b) as number[];
-                            
-                            return uniqueTimes.map((time, idx) => {
-                              const dosesAtTime = dayDoses.filter(d => d.startMin === time);
-                              const hasCoinciding = dosesAtTime.some(d => d.isCoinciding);
-                              const hasSimultaneous = dosesAtTime.length > 1;
-                              const isConflict = hasCoinciding || hasSimultaneous;
-                              const isInvalidRow = dosesAtTime.some(d => d.delayMin > tolerance);
-
-                              return (
-                                <div key={idx} className={`p-3 space-y-2.5 ${isInvalidRow ? 'bg-rose-50/20' : isConflict ? 'bg-amber-55/20' : ''}`}>
-                                  <div className="flex items-center justify-between">
-                                    <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-widest">
-                                      Lote das {formatClock(time)}
-                                    </span>
-                                    {isInvalidRow ? (
-                                      <span className="bg-rose-150 border border-rose-300 text-rose-850 text-[8px] font-bold uppercase px-1.5 py-0.5 rounded">
-                                        Inválido
-                                      </span>
-                                    ) : isConflict ? (
-                                      <span className="bg-amber-100 border border-amber-200 text-amber-800 text-[8px] font-bold uppercase px-1.5 py-0.5 rounded">
-                                        Modulado
-                                      </span>
-                                    ) : (
-                                      <span className="bg-emerald-100 border border-emerald-200 text-emerald-800 text-[8px] font-bold uppercase px-1.5 py-0.5 rounded">
-                                        OK
-                                      </span>
-                                    )}
-                                  </div>
-                                  <div className="space-y-2">
-                                    {dosesAtTime.map(dose => {
-                                      const med = meds.find(m => m.id === dose.medId);
-                                      const isInvalid = dose.delayMin > tolerance;
-                                      return (
-                                        <div key={dose.medId} className={`flex items-start gap-2 p-3 rounded-xl border ${isInvalid ? 'bg-rose-50 border-rose-200' : 'bg-slate-50/50 border-slate-150'}`}>
-                                          <div className={`w-0.5 h-7 rounded-sm shrink-0 ${isInvalid ? 'bg-rose-600' : isConflict ? 'bg-amber-550' : 'bg-emerald-500'}`} />
-                                          <div className="flex-1 min-w-0">
-                                            <div className="flex justify-between items-start gap-2">
-                                              <span className="font-bold text-xs text-slate-800 uppercase leading-none truncate block">
-                                                {med?.name}
-                                              </span>
-                                              {dose.delayMin > 0 && (
-                                                <span className="text-[8.5px] font-bold text-amber-700 bg-amber-55 px-1 py-0.5 rounded-sm shrink-0">
-                                                  +{dose.delayMin}m
-                                                </span>
-                                              )}
-                                            </div>
-                                            <div className="flex items-center justify-between text-[8.5px] text-slate-500 mt-1">
-                                              <span>{dose.modeLabel}</span>
-                                              <span>Término: {formatClock(dose.endMin)}</span>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      );
-                                    })}
-                                  </div>
-                                </div>
-                              );
-                            });
-                          })()}
-                        </div>
-
                       </div>
                     )}
                   </div>
