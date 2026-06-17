@@ -314,7 +314,7 @@ export default function App() {
                     : currentView === 'sonda' 
                       ? 'Guia de Administração via Sonda' 
                       : currentView === 'calculadoras'
-                        ? 'Calculadoras Clínicas'
+                        ? 'Escores e Aprazamento'
                         : 'Manual de Injetáveis Adulto'}
                 </h1>
                 <p className="text-sky-100/90 text-sm font-medium tracking-wide flex items-center gap-1.5 mt-0.5">
@@ -324,7 +324,7 @@ export default function App() {
                     : currentView === 'sonda' 
                       ? 'Recomendações técnicas para preparo e administração enteral — ISCAL'
                       : currentView === 'calculadoras'
-                        ? 'Calculadoras de auxílio à decisão e escores prognósticos de risco — ISCAL'
+                        ? 'Calculadoras clínicas de risco e inteligência de aprazamento de fármacos — ISCAL'
                         : 'Guia Clínico de Diluição, Estabilidade e Administração Hospitalar'}
                 </p>
               </div>
@@ -381,11 +381,11 @@ export default function App() {
                     id: 'calculadoras',
                     title: 'Calculadoras',
                     subtitle: 'Escores & Aprazamento',
-                    desc: 'Calculadoras clínicas de suporte à tomada de decisões, escores de risco (Pádua) e aprazamento técnico antimicrobiano.',
-                    icon: Calculator,
+                    desc: 'Ferramenta de aprazamento de antimicrobianos contra conflitos e Escore de Pádua para avaliação de risco de TEV.',
+                    icon: Clock,
                     available: true,
                     tag: 'Disponível',
-                    colorClass: 'bg-gradient-to-tr from-rose-500 to-orange-400 border-rose-500/30 text-white shadow-[0_4px_12px_rgba(244,63,94,0.25)] group-hover:shadow-[0_6px_16px_rgba(244,63,94,0.35)]',
+                    colorClass: 'bg-gradient-to-tr from-[#0c3366] to-cyan-500 border-blue-500/35 text-white shadow-[0_4px_12px_rgba(12,51,102,0.25)] group-hover:shadow-[0_6px_16px_rgba(12,51,102,0.35)]',
                   }
                 ].map((mod) => {
                   const IconComponent = mod.icon;
