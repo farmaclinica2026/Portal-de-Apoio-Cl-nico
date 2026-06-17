@@ -881,7 +881,7 @@ export default function AprazamentoModulo({ onBackToHome, embedded = false }: Ap
                   <h3 className="text-xl font-bold text-slate-900 tracking-tight">Cronograma de Infusão</h3>
                   <div className="flex items-center gap-2 mt-1">
                     <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block" />
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Ajuste Inteligente de Segurança</span>
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Ajuste Técnico de Segurança</span>
                   </div>
                 </div>
                 
@@ -1106,7 +1106,7 @@ export default function AprazamentoModulo({ onBackToHome, embedded = false }: Ap
               </div>
               <h3 className="font-bold text-slate-800 text-lg">Otimizador Clínico de Horários</h3>
               <p className="text-slate-400 mt-2 max-w-xs mx-auto text-xs leading-relaxed font-medium">
-                Insira as prescrições de antimicrobianos do paciente ao lado. O sistema calculará de forma inteligente a escala livre de conflitos, respeitando o volume ideal e o <b className="text-blue-600">distanciamento profilático</b>.
+                Insira as prescrições de antimicrobianos do paciente ao lado. O sistema calculará de forma técnica e automática a escala livre de conflitos, respeitando o volume ideal e o <b className="text-blue-600">distanciamento profilático</b>.
               </p>
             </div>
           )}

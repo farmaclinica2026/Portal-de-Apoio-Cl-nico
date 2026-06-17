@@ -172,7 +172,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                       Aprazamento Técnico
                     </h4>
                     <p className="text-xs text-slate-500 mt-1.5 leading-relaxed font-semibold">
-                      Algoritmo inteligente para elaboração de horários e escala de infusão de antimicrobianos livre de conflitos físicos ou químicos.
+                      Algoritmo matemático e técnico para elaboração de horários e escala de infusão de antimicrobianos livre de conflitos físicos ou químicos.
                     </p>
                   </div>
                 </div>
