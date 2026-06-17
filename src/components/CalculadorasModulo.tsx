@@ -195,9 +195,8 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                 </div>
 
                 {isClinico === false && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -5 }}
-                    animate={{ opacity: 1, y: 0 }}
+                  <div
+                    key="applicability_warning"
                     className="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-2.5 text-xs text-amber-800 leading-relaxed"
                     id="applicability_warning"
                   >
@@ -205,7 +204,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                     <span>
                       <strong>Aviso de Limitação:</strong> O escore de Pádua foi calibrado e validado unicamente para pacientes clínicos hospitalizados. Ele <strong>não se aplica</strong> a pacientes essencialmente cirúrgicos ou em cenário exclusivamente ambulatorial de triagem.
                     </span>
-                  </motion.div>
+                  </div>
                 )}
               </div>
 
@@ -522,22 +521,22 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                     : 'bg-emerald-50 border border-emerald-200 text-emerald-700'
                 }`} id="risk_evaluation_badge">
                   {isHighRisk ? (
-                    <>
+                    <span key="badge_high_risk" className="flex items-center gap-1.5">
                       <ShieldAlert className="w-4 h-4 text-rose-600 shrink-0" />
                       <span>Alto Risco (≥ 4 de pontuação)</span>
-                    </>
+                    </span>
                   ) : (
-                    <>
+                    <span key="badge_low_risk" className="flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>Baixo Risco (0 - 3 de pontuação)</span>
-                    </>
+                    </span>
                   )}
                 </div>
 
                 {/* Interpretation Alert Block */}
                 <div className="w-full text-left bg-slate-50 border border-slate-100 rounded-2xl p-4 text-xs leading-relaxed" id="textual_interpretation">
                   {isHighRisk ? (
-                    <div className="space-y-3">
+                    <div className="space-y-3" key="desc_high_risk">
                       <span className="font-extrabold text-rose-800 text-[11px] uppercase tracking-wider block">Recomendação Clínica:</span>
                       <p className="text-slate-600">
                         O total é <strong>{totalScore}</strong>. Por ser <strong className="text-rose-800">Alto Risco (≥4)</strong>, pacientes desta coorte que não receberam profilaxia farmacológica apresentaram taxas elevadas de complicação em 90 dias.
@@ -547,7 +546,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                       </div>
                     </div>
                   ) : (
-                    <div className="space-y-3">
+                    <div className="space-y-3" key="desc_low_risk">
                       <span className="font-extrabold text-emerald-800 text-[11px] uppercase tracking-wider block">Análise de Risco:</span>
                       <p className="text-slate-600">
                         O total é <strong>{totalScore}</strong>. Por possuir risco inferior a 4, o paciente se enquadra na faixa de <strong className="text-emerald-800">Baixo Risco</strong>.
