@@ -4,7 +4,6 @@ import {
   ChevronRight, 
   Calculator, 
   CheckCircle2, 
-  ShieldAlert, 
   Plus, 
   Minus,
   Info,
@@ -539,7 +538,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                   <div className="md:col-span-5 flex flex-col justify-center items-center p-6 rounded-2xl border text-center transition-all bg-slate-50 border-slate-200">
                     <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block mb-1">Pontuação Total</span>
                     <span className={`text-5xl font-black font-mono tracking-tight leading-none mb-1.5 ${
-                      isHighRisk ? 'text-rose-600 scale-102' : 'text-emerald-600'
+                      isHighRisk ? 'text-rose-600' : 'text-emerald-600'
                     }`}>
                       {totalScore}
                     </span>
@@ -551,7 +550,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                     }`}>
                       {isHighRisk ? (
                         <>
-                          <ShieldAlert className="w-3.5 h-3.5 text-rose-600 shrink-0" />
+                          <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />
                           <span>Alto Risco</span>
                         </>
                       ) : (
@@ -592,7 +591,7 @@ export default function CalculadorasModulo({ onBackToHome }: CalculadorasModuloP
                             A coorte que embasa a aplicação do Padua mostrou que pacientes de <strong className="text-slate-900">Alto Risco (≥4)</strong> que não receberam profilaxia apresentaram uma taxa de <strong>11% de TEV em 90 dias</strong>, comparado a apenas <strong>2,2%</strong> nos que receberam (<span className="font-semibold text-[#0c3366]">HR 0,13; IC95% 0,04–0,40</span>).
                           </p>
                           <p className="text-[10px] text-rose-900 font-bold bg-rose-100/50 p-2 rounded-xl border border-rose-200/20">
-                            Recomenda-se instituir profilaxia medicamentosa (parapirina, enoxaparina, etc.) caso não haja contraindicações clínicas ou risco ativo de sangramento.
+                            Recomenda-se instituir profilaxia medicamentosa (heparina, enoxaparina, etc.) caso não haja contraindicações clínicas ou risco ativo de sangramento.
                           </p>
                         </div>
                       ) : (
